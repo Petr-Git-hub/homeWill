@@ -38,12 +38,15 @@ body {
 
 .uk-button-danger {
   color: #fff;
-  background: linear-gradient(85.6deg, #00AD03 -2.25%, #008602 100%);
-  border: 1px solid #18C91A;
+  background: linear-gradient(85.6deg, rgba(211, 148, 80, 0.2) -2.25%, rgba(242, 200, 117, 0.2) 100%);
+  border: 2px solid #F4D291;
+  background: rgba(211, 148, 80, 0.2);
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .uk-button-danger:hover {
-  background: linear-gradient(190deg, #00ad03 2.25%, #008602 100%);
+  background-color: transparent;
 }
 
 .header {
@@ -71,13 +74,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 20px;
-  padding: 5px;
-  background-color: #fff;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
-  min-width: 480px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
 }
 
 .header-right .contact {
@@ -88,7 +87,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: auto;
+  margin: 0;
+  text-align: right;
 }
 
 .header-right .contact .tel {
@@ -97,7 +97,7 @@ body {
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
-  color: #000;
+  color: #fff;
 }
 
 .header-right .contact .mail {
@@ -106,7 +106,7 @@ body {
   font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
-  color: #000;
+  color: #fff;
 }
 
 .header .logo {
@@ -124,7 +124,7 @@ body {
 
 .section-banner {
   position: relative;
-  padding: 220px 0 50px;
+  padding: 220px 0 105px;
   z-index: 1;
 }
 
@@ -150,8 +150,17 @@ body {
   z-index: -2;
 }
 
+.icon-dovn {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
 .banner__title {
-  font-weight: 700;
+  font-weight: 200;
   font-size: 30px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -159,11 +168,15 @@ body {
   color: #fff;
 }
 
+.banner__title b {
+  font-weight: 600;
+}
+
 .banner__inf {
   width: calc((100% - 148px) / 3);
   position: relative;
   background: #D9D9D9;
-  border: 2px solid #D9D9D9;
+  border: 2px solid #F4D291;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 10px 40px;
@@ -185,33 +198,39 @@ body {
   background: #96f5f7;
   -webkit-filter: blur(90px);
           filter: blur(90px);
-  width: 65%;
-  height: 73%;
+  width: 60%;
+  height: 36%;
   margin: auto;
   top: -48px;
   z-index: 1;
 }
 
 .banner__inf:first-child {
-  background: #4f635d;
-  padding: 5px;
   padding-bottom: 40px;
 }
 
 .banner__inf:first-child .banner__inf-img {
-  margin-top: -80px;
+  margin-top: -60px;
 }
 
-.banner__inf:first-child .banner__inf-text {
-  color: #fff;
+.banner__inf:first-child::before {
+  background: #F4D291;
 }
 
 .banner__inf:nth-child(2) .banner__inf-img {
-  margin-top: -60px;
+  margin-top: -90px;
+}
+
+.banner__inf:nth-child(2)::before {
+  background: #96F5F7;
 }
 
 .banner__inf:last-child .banner__inf-img {
   margin-top: -66px;
+}
+
+.banner__inf:last-child::before {
+  background: #F4D291;
 }
 
 .banner__inf-img {
@@ -230,6 +249,9 @@ body {
   line-height: 100%;
   letter-spacing: 0%;
   margin-top: auto;
+  color: #000;
+  position: relative;
+  z-index: 1;
 }
 
 .banner__inf-list {
@@ -260,7 +282,7 @@ body {
   display: block;
   width: 158px;
   margin: auto;
-  border-bottom: 1px dashed #B3C3BF;
+  border-bottom: 1px dashed #927C47;
   margin-top: 60px;
 }
 
@@ -274,6 +296,7 @@ body {
   font-size: 20px;
   line-height: 34px;
   letter-spacing: 0%;
+  color: #927C47;
 }
 
 .title {
@@ -331,7 +354,7 @@ body {
   line-height: 100%;
   letter-spacing: 0%;
   margin-bottom: 10px;
-  color: #406665;
+  color: #927C47;
 }
 
 .desc-block__title {
@@ -359,6 +382,25 @@ body {
 
 .footer .header-right {
   margin-bottom: 34px;
+}
+
+.footer .header-right .uk-button {
+  background-color: transparent;
+  color: #000;
+}
+
+.footer .header-right .uk-button-danger:hover {
+  opacity: 0.6;
+}
+
+.footer .header-right .contact .tel {
+  color: #848484;
+  font-size: 20px;
+}
+
+.footer .header-right .contact .mail {
+  color: #848484;
+  font-size: 16px;
 }
 
 .footer-logo {
